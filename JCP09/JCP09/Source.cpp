@@ -21,6 +21,19 @@ bool pridat(vector<osoba> &v, const char *jmeno, const char * prijmeni) {
 	return true;
 }
 
+bool odebrat(vector<osoba>& v, const char* jmeno, const char* prijmeni) {
+	int index = 0;
+	for (auto& osoba : v) {
+		if (jmeno == osoba.jmeno && prijmeni == osoba.prijmeni) {
+			v.erase(v.begin() + index);
+			return true;
+		}
+		index++;
+	}
+	return false;
+}
+
+
 int main() {
 	vector<osoba> osoby;
 	pridat(osoby, "Petr", "Nemec");
@@ -32,6 +45,9 @@ int main() {
 	pridat(osoby, "Andrea", "Nova");
 	pridat(osoby, "Petr", "Nemec");
 	pridat(osoby, "Alice", "Novakova");
+	odebrat(osoby, "Petr", "Nemec");
+	odebrat(osoby, "Andrea", "Nova");
+	odebrat(osoby, "Andrea", "Nova");	
 	for (auto& o : osoby) {
 		cout << o.jmeno << " " << o.prijmeni << endl;
 	}
