@@ -1,0 +1,8 @@
+broskve     22      27.9
+hrusky     4.6      43.9
+jablka     41.5      35.6
+jahody     13.2      42
+merunky     16      34.3
+rybiz     24.5      38.9
+svestky     2.8      45
+tresne     9      29.9
